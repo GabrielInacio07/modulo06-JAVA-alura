@@ -4,21 +4,19 @@ class Main{
     static void main(String[] args) {
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
+        boolean desconto = true; //true aplica desconto, false sem desconto ,alterar manual
 
-        System.out.println("Comparador de Maior | Menor");
+        System.out.println("Dia de DESCONTO no mercadão");
 
-        System.out.println("Digite o primeiro número: ");
-        double number = Double.parseDouble(input.nextLine());
+        System.out.println("\nDigite o valor da mercadoria comprada: ");
+        double valor = Double.parseDouble(input.nextLine());
 
-        System.out.println("Digite o segundo número: ");
-        double number2 = Double.parseDouble(input.nextLine());
-
-        if(number > number2){
-            System.out.println("O numéro " + number + " é MAIOR que " + number2);
-        }else if(number < number2){
-            System.out.println("O numéro " + number2 + " é MAIOR que " + number);
+        System.out.println("Preço da mercadoria: " + valor);
+        if(desconto){
+            valor -= valor * 0.1;
+            System.out.println("Hojé é dia 10% de desconto sua compra terá o valor final de: " + valor);
         }else{
-            System.out.println("Ambos números são iguais");
+            System.out.println("Hojé não é dia de desconto, valor final: " + valor);
         }
 
         input.close();
