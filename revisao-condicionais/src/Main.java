@@ -6,18 +6,21 @@ class Main{
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Verificando número em Intervalo de valor");
+        System.out.println("Verificando se valores podem formar um TRIÂNGULO");
 
-        System.out.println("\nDigite o valor para Empréstimo");
-        double valor = Double.parseDouble(input.nextLine());
+        System.out.println("\nDigite o lado A:");
+        int ladoA = Integer.parseInt(input.nextLine());
 
-        if(valor >= 1000 && valor <= 5000){
-            System.out.println("Valor Permitido!!");
-            System.out.println("Empréstimo de " + valor + " efetuado com sucesso");
-        }else{
-            System.out.println("Valor Negado!!");
-            System.out.println("O empréstimo precisa ser no MÍNIMO de 1000R$ e no MAXÍMO de R$10000");
-        }
+        System.out.println("\nDigite o lado B:");
+        int ladoB = Integer.parseInt(input.nextLine());
+
+        System.out.println("\nDigite o lado C:");
+        int ladoC = Integer.parseInt(input.nextLine());
+
+        String isTriangulo = (ladoA + ladoB) > ladoC ?
+                "Os valores podem formar um TRIÂNGULO" : "Valores NÃO podem formar um TRIÂNGULO";
+
+        System.out.println(isTriangulo);
 
         input.close();
     }
