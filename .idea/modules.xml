@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modulo06-JAVA-alura.iml" filepath="$PROJECT_DIR$/.idea/modulo06-JAVA-alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/revisao-condicionais/revisao-condicionais.iml" filepath="$PROJECT_DIR$/revisao-condicionais/revisao-condicionais.iml" />
     </modules>
   </component>
 </project>
