@@ -1,22 +1,27 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Main{
     static void main(String[] args) {
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
-        boolean desconto = true; //true aplica desconto, false sem desconto ,alterar manual
+        ArrayList<String> diasDaSemana = new ArrayList<>();
 
-        System.out.println("Dia de DESCONTO no mercadão");
+        diasDaSemana.add("SEGUNDA");
+        diasDaSemana.add("TERÇA");
+        diasDaSemana.add("QUARTA");
+        diasDaSemana.add("QUINTA");
+        diasDaSemana.add("SEXTA");
 
-        System.out.println("\nDigite o valor da mercadoria comprada: ");
-        double valor = Double.parseDouble(input.nextLine());
+        System.out.println("Verificar o dia útil");
 
-        System.out.println("Preço da mercadoria: " + valor);
-        if(desconto){
-            valor -= valor * 0.1;
-            System.out.println("Hojé é dia 10% de desconto sua compra terá o valor final de: " + valor);
+        System.out.println("\nDigite um dia da semana: ");
+        String diaInformado = input.nextLine();
+
+        if(diasDaSemana.contains(diaInformado.toUpperCase())){
+            System.out.println("O dia " + diaInformado + " é um dia útil");
         }else{
-            System.out.println("Hojé não é dia de desconto, valor final: " + valor);
+            System.out.println("O dia " + diaInformado + " NÃO é um dia útil");
         }
 
         input.close();
