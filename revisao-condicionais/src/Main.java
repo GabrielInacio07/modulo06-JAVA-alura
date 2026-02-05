@@ -5,23 +5,18 @@ class Main{
     static void main(String[] args) {
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
-        ArrayList<String> diasDaSemana = new ArrayList<>();
 
-        diasDaSemana.add("SEGUNDA");
-        diasDaSemana.add("TERÇA");
-        diasDaSemana.add("QUARTA");
-        diasDaSemana.add("QUINTA");
-        diasDaSemana.add("SEXTA");
+        System.out.println("Verificando número em Intervalo de valor");
 
-        System.out.println("Verificar o dia útil");
+        System.out.println("\nDigite o valor para Empréstimo");
+        double valor = Double.parseDouble(input.nextLine());
 
-        System.out.println("\nDigite um dia da semana: ");
-        String diaInformado = input.nextLine();
-
-        if(diasDaSemana.contains(diaInformado.toUpperCase())){
-            System.out.println("O dia " + diaInformado + " é um dia útil");
+        if(valor >= 1000 && valor <= 5000){
+            System.out.println("Valor Permitido!!");
+            System.out.println("Empréstimo de " + valor + " efetuado com sucesso");
         }else{
-            System.out.println("O dia " + diaInformado + " NÃO é um dia útil");
+            System.out.println("Valor Negado!!");
+            System.out.println("O empréstimo precisa ser no MÍNIMO de 1000R$ e no MAXÍMO de R$10000");
         }
 
         input.close();
