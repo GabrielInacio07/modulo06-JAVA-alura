@@ -6,6 +6,7 @@ class Main{
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
 
+        //deixei como sétimo exercicio é oitavo
         System.out.println("Verificando se valores podem formar um TRIÂNGULO");
 
         System.out.println("\nDigite o lado A:");
