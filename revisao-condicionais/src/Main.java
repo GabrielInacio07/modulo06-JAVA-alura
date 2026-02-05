@@ -2,27 +2,29 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class Main{
-    static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Compatibilidade para DOAR sangue");
+        System.out.println("Sistema de segurança");
 
-        System.out.println("\nDigite sua idade: ");
-        int idade = Integer.parseInt(input.nextLine());
+        System.out.println("\nDigite seu código de acesso: ");
+        int codigoDeAcesso = Integer.parseInt(input.nextLine());
 
-        System.out.println("Digite seu peso: ");
-        double peso = Double.parseDouble(input.nextLine());
+        System.out.println("\nDigite seu nível de permissão [1,2,3]: ");
+        int permissaoDeAcesso = Integer.parseInt(input.nextLine());
 
-        System.out.println("\nIdade: " + idade);
-        System.out.println("Peso: " + peso);
-        if(idade > 17 && idade < 66 && peso > 50){
-            System.out.println("Doador compatível");
-        }else{
-            System.out.println("Doador NÃO é compatível");
-            System.out.println("MOTIVO: Idade ou Peso não está entre a faixa de compatibilidade ");
+        if (codigoDeAcesso == 2026 && permissaoDeAcesso == 3) {
+            System.out.println("Acesso permitido. Bem-vindo ao sistema!");
+        } else {
+            System.out.println("Acesso negado.");
+            if (codigoDeAcesso != 2026) {
+                System.out.println("Código de acesso inválido!");
+            }
+            if (permissaoDeAcesso < 3) {
+                System.out.println("Nível de permissão não permitido!");
+            }
         }
-
         input.close();
     }
 }
