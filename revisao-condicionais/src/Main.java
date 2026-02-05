@@ -4,17 +4,21 @@ class Main{
     static void main(String[] args) {
         System.out.println("Revisão condicionais [Módulo 06]");
         Scanner input = new Scanner(System.in);
-        String password = "123456";
 
-        System.out.println("Validador de senha");
+        System.out.println("Comparador de Maior | Menor");
 
-        System.out.println("Digite sua senha: ");
-        String senhaDigitada = input.nextLine();
+        System.out.println("Digite o primeiro número: ");
+        double number = Double.parseDouble(input.nextLine());
 
-        if(!senhaDigitada.equals(password)){
-            System.out.println("Senha inválida");
-        }else {
-            System.out.println("Acesso permitido!");
+        System.out.println("Digite o segundo número: ");
+        double number2 = Double.parseDouble(input.nextLine());
+
+        if(number > number2){
+            System.out.println("O numéro " + number + " é MAIOR que " + number2);
+        }else if(number < number2){
+            System.out.println("O numéro " + number2 + " é MAIOR que " + number);
+        }else{
+            System.out.println("Ambos números são iguais");
         }
 
         input.close();
